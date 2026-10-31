@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ironsnitra.github.io/kridi/sitemap.xml

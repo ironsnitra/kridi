@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kridi — Carnet de crédit pour commerçants · دفتر الكريدي</title>
+<meta name="description" content="Kridi remplace le carnet de crédit papier : dettes clients et fournisseurs en deux touches, rappels WhatsApp, sans Internet. En arabe et en français. Gratuit.">
+<link rel="canonical" href="https://ironsnitra.github.io/kridi/">
+<meta name="theme-color" content="#0b5a50">
+<meta name="robots" content="index, follow, max-image-preview:large">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kridi">
+<meta property="og:title" content="Kridi — le carnet de crédit des commerçants · دفتر الكريدي">
+<meta property="og:description" content="Notez le kridi de vos clients en deux touches, envoyez un rappel WhatsApp, et ne perdez plus le carnet.">
+<meta property="og:url" content="https://ironsnitra.github.io/kridi/">
+<meta property="og:image" content="https://ironsnitra.github.io/kridi/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="L'étiquette d'un cahier : Nom Kridi, Matière : dettes clients et fournisseurs, دفتر الكريدي">
+<meta property="og:locale" content="fr_DZ">
+<meta property="og:locale:alternate" content="ar_DZ">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;600;700&family=IBM+Plex+Sans:wght@400;600;700&family=Kalam:wght@400;700&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Kridi",
+      "alternateName": ["دفتر الكريدي", "Carnet Kridi"],
+      "description": "Carnet de crédit numérique pour commerçants : dettes clients et fournisseurs, rappels WhatsApp et SMS, fonctionne sans Internet.",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Android",
+      "inLanguage": ["ar", "fr", "en"],
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "DZD" },
+      "url": "https://ironsnitra.github.io/kridi/",
+      "image": "https://ironsnitra.github.io/kridi/assets/og.png"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Kridi est-il gratuit ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. L'application affiche des publicités discrètes, jamais pendant que vous notez un montant." } },
+        { "@type": "Question", "name": "Faut-il Internet pour utiliser Kridi ?", "acceptedAnswer": { "@type": "Answer", "text": "Non. Tout fonctionne hors ligne. Internet sert seulement à afficher les publicités et à envoyer les rappels WhatsApp." } },
+        { "@type": "Question", "name": "Où sont stockées mes données ?", "acceptedAnswer": { "@type": "Answer", "text": "Sur votre téléphone. Il n'y a ni compte ni serveur : nous ne voyons pas vos clients ni vos montants." } },
+        { "@type": "Question", "name": "Mes clients doivent-ils installer l'application ?", "acceptedAnswer": { "@type": "Answer", "text": "Non. Ils reçoivent un simple message WhatsApp ou SMS que vous envoyez vous-même." } },
+        { "@type": "Question", "name": "Que se passe-t-il si je perds mon téléphone ?", "acceptedAnswer": { "@type": "Answer", "text": "Pour l'instant, les données restent sur le téléphone. La sauvegarde arrive dans une prochaine version." } }
+      ]
+    }
+  ]
+}
+</script>
+<script>
+  // Decide the language before first paint on small screens, to avoid a flash.
+  try {
+    var saved = localStorage.getItem("kridi-lang");
+    var guess = (navigator.language || "").slice(0, 2) === "ar" ? "ar" : "fr";
+    document.documentElement.dataset.lang = saved || guess;
+  } catch (e) { document.documentElement.dataset.lang = "fr"; }
+</script>
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="./" aria-label="Kridi, accueil"><b>Kridi</b><span lang="ar">دفتر الكريدي</span></a>
+  <nav aria-label="Sections">
+    <a href="#essayer">Essayer</a>
+    <a href="#comment">Comment ça marche</a>
+    <a href="#questions">Questions</a>
+    <a href="privacy/">Confidentialité</a>
+  </nav>
+  <div class="lang-switch" role="group" aria-label="Langue / اللغة">
+    <button type="button" data-set-lang="fr" aria-pressed="true">FR</button>
+    <button type="button" data-set-lang="ar" lang="ar" aria-pressed="false">عربي</button>
+  </div>
+</header>
+
+<section class="cover" aria-labelledby="title">
+  <div>
+    <div class="label">
+      <h1 id="title">
+        <span class="field field--name"><small>Nom</small> <span class="w">Kridi</span></span>
+        <span class="field field--subject"><small>Matière</small> <span class="w">Dettes clients &amp; fournisseurs</span></span>
+        <span class="field field--subject" lang="ar" dir="rtl"><small>المادة</small> <span class="w">دفتر الكريدي</span></span>
+        <span class="field field--class"><small>Classe</small> <span class="w">Épiceries, pharmacies, quincailleries…</span></span>
+      </h1>
+    </div>
+
+    <p class="lede" lang="fr">Notez le kridi de vos clients en deux touches, envoyez-leur un rappel WhatsApp, et ne perdez plus jamais le carnet. Sans Internet, en arabe et en français.</p>
+    <p class="lede" lang="ar" dir="rtl">سجّل كريدي زبائنك بلمستين، أرسل لهم تذكيرا عبر واتساب، ولن يضيع منك الكارني بعد اليوم. بدون إنترنت، بالعربية والفرنسية.</p>
+
+    <div class="actions">
+      <span class="soon"><i aria-hidden="true"></i><span lang="fr">Bientôt sur Google Play</span><span class="sep" aria-hidden="true">·</span><span lang="ar" dir="rtl">قريبا على Google Play</span></span>
+      <a class="ghost-link" href="#essayer">Essayer ici · <span lang="ar">جرّب</span> ↓</a>
+    </div>
+  </div>
+
+  <div class="phone" role="img" aria-label="Écran d'accueil de Kridi : total à encaisser 184 500 DA, total à payer 62 000 DA, liste des clients avec leur solde">
+    <div class="screen" aria-hidden="true">
+      <div class="appbar">
+        <b>Kridi</b>
+        <div class="tabs"><span class="on">Clients</span><span>Fournisseurs</span></div>
+      </div>
+      <div class="totals">
+        <div><small>À encaisser</small><strong class="pos">184 500 DA</strong></div>
+        <div><small>À payer</small><strong class="neg">62 000 DA</strong></div>
+      </div>
+      <ul class="rows">
+        <li><span class="av">K</span><span class="nm">Karim B.</span><span class="dot"></span><span class="amt">12 300 DA</span></li>
+        <li><span class="av">H</span><span class="nm">Hadja Fatma</span><span class="amt">8 750 DA</span></li>
+        <li><span class="av">C</span><span class="nm">Café du coin</span><span class="amt">6 200 DA</span></li>
+        <li><span class="av">Y</span><span class="nm">Yacine</span><span class="amt">4 000 DA</span></li>
+        <li><span class="av">S</span><span class="nm">Salim taxi</span><span class="amt">1 850 DA</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<main>
+
+  <!-- 1. The paper notebook -->
+  <section class="spread" aria-label="Le carnet papier / الكارني">
+    <article class="page" lang="fr">
+      <span class="folio">1</span>
+      <p class="date">Le carnet</p>
+      <h2>Le carnet, tout le monde le connaît. <u>Ses problèmes aussi.</u></h2>
+      <ul class="ledger" aria-label="Exemple de page de carnet">
+        <li class="paid"><span class="n">Karim — pain, lait</span><span class="a">350</span></li>
+        <li class="paid"><span class="n">Karim — sucre, café</span><span class="a">1 200</span></li>
+        <li><span class="n">Karim — huile 5 L</span><span class="a">1 450</span></li>
+        <li><span class="n">Karim — couches</span><span class="a">2 300</span></li>
+        <li class="sum"><span class="n">reste</span><span class="a">3 750 ?</span></li>
+        <li class="scribble">il dit qu'il a déjà payé l'huile…</li>
+      </ul>
+      <p>Une page déchirée, un carnet mouillé ou perdu, et l'argent qu'on vous doit disparaît avec. Quand un client conteste un montant, vous n'avez que votre écriture pour vous défendre. Et réclamer son dû en face à un voisin, personne n'aime le faire.</p>
+    </article>
+    <article class="page" lang="ar" dir="rtl">
+      <span class="folio">١</span>
+      <p class="date">الكارني</p>
+      <h2>الكارني، كلنا نعرفه. <u>ونعرف مشاكله.</u></h2>
+      <ul class="ledger" aria-label="مثال على صفحة من الكارني">
+        <li class="paid"><span class="n">كريم — خبز وحليب</span><span class="a">350</span></li>
+        <li class="paid"><span class="n">كريم — سكر وقهوة</span><span class="a">1200</span></li>
+        <li><span class="n">كريم — زيت 5 لتر</span><span class="a">1450</span></li>
+        <li><span class="n">كريم — حفاظات</span><span class="a">2300</span></li>
+        <li class="sum"><span class="n">الباقي</span><span class="a">3750 ؟</span></li>
+        <li class="scribble">يقول إنه دفع ثمن الزيت…</li>
+      </ul>
+      <p>ورقة تتقطع، أو كارني يتبلل أو يضيع، فيضيع معه مالك عند الناس. وإذا أنكر زبون مبلغا، ليس لك إلا خطّ يدك. ومطالبة جارك بدَينه وجها لوجه أمر لا يحبه أحد.</p>
+    </article>
+  </section>
+
+  <!-- 2. Live demo -->
+  <section class="spread spread--demo" id="essayer" aria-labelledby="demo-title">
+    <div class="page" lang="fr">
+      <span class="folio">2</span>
+      <h2 id="demo-title" class="demo-intro">Essayez&nbsp;: <span lang="ar">جرّب</span></h2>
+      <p>Choisissez un montant, puis touchez un des deux boutons. C'est tout ce que Kridi vous demande.</p>
+      <div class="demo-controls">
+        <div class="chips" role="group" aria-label="Montant / المبلغ">
+          <button type="button" data-amount="200" aria-pressed="false">200 DA</button>
+          <button type="button" data-amount="500" aria-pressed="true">500 DA</button>
+          <button type="button" data-amount="1500" aria-pressed="false">1 500 DA</button>
+          <button type="button" data-amount="4000" aria-pressed="false">4 000 DA</button>
+        </div>
+        <div class="demo-buttons">
+          <button type="button" class="give" data-type="credit">J'ai donné <small lang="ar">أعطيت</small></button>
+          <button type="button" class="get" data-type="payment">J'ai reçu <small lang="ar">استلمت</small></button>
+        </div>
+      </div>
+      <h3>Le carnet de Karim, écrit pour vous</h3>
+      <ol class="ledger demo-ledger" aria-live="polite"></ol>
+    </div>
+    <div class="page" lang="fr">
+      <span class="folio">3</span>
+      <div class="phone demo-phone">
+        <div class="screen">
+          <div class="appbar"><b>Karim B.</b><div class="tabs"><span class="on">Historique</span></div></div>
+          <div class="balance-card">
+            <small data-balance-label>Soldé</small>
+            <strong data-balance>0 DA</strong>
+          </div>
+          <div style="padding: 0 10px">
+            <button type="button" class="demo-remind" disabled>Rappel WhatsApp <small lang="ar">تذكير واتساب</small></button>
+          </div>
+          <div class="bubble demo-bubble" hidden>
+            <span data-msg></span>
+            <time>09:41</time>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. How it works -->
+  <section class="spread" id="comment" aria-label="Comment ça marche / كيف يعمل">
+    <article class="page" lang="fr">
+      <span class="folio">4</span>
+      <p class="date">Comment ça marche</p>
+      <h2>Trois gestes, pas de formation.</h2>
+      <ol class="steps">
+        <li>
+          <h3>Ajoutez le client</h3>
+          <p>Son nom suffit. Le numéro de téléphone est utile pour les rappels.</p>
+        </li>
+        <li>
+          <h3>Un bouton rouge, un bouton vert</h3>
+          <div class="two-buttons" aria-hidden="true"><span class="give">J'ai donné</span><span class="get">J'ai reçu</span></div>
+          <p>Tapez le montant, ajoutez une note si vous voulez («&nbsp;pain + lait&nbsp;»). Le solde se calcule tout seul, avec la date de chaque opération.</p>
+        </li>
+        <li>
+          <h3>Le rappel part par WhatsApp</h3>
+          <div class="bubble">Bonjour Karim, c'est l'épicerie Amine. Petit rappel&nbsp;: votre solde chez nous est de 3&nbsp;750&nbsp;DA. Merci&nbsp;!<time>09:41</time></div>
+          <p>Le message est déjà écrit. Vous n'avez qu'à appuyer sur «&nbsp;envoyer&nbsp;». Pas de WhatsApp&nbsp;? Il part par SMS.</p>
+        </li>
+      </ol>
+    </article>
+    <article class="page" lang="ar" dir="rtl">
+      <span class="folio">٤</span>
+      <p class="date">كيف يعمل</p>
+      <h2>ثلاث خطوات، بلا تدريب.</h2>
+      <ol class="steps">
+        <li>
+          <h3>أضف الزبون</h3>
+          <p>اسمه يكفي. ورقم الهاتف مفيد لإرسال التذكير.</p>
+        </li>
+        <li>
+          <h3>زر أحمر وزر أخضر</h3>
+          <div class="two-buttons" aria-hidden="true"><span class="give">أعطيت</span><span class="get">استلمت</span></div>
+          <p>اكتب المبلغ، وأضف ملاحظة إن أردت («خبز وحليب»). الرصيد يُحسب وحده، مع تاريخ كل عملية.</p>
+        </li>
+        <li>
+          <h3>التذكير يصل عبر واتساب</h3>
+          <div class="bubble">السلام عليكم كريم، معك بقالة أمين. تذكير بسيط: المبلغ المتبقي عليك هو 3750 دج. شكرا!<time>09:41</time></div>
+          <p>الرسالة مكتوبة مسبقا، وما عليك إلا الضغط على «إرسال». ليس عنده واتساب؟ تُرسل برسالة SMS.</p>
+        </li>
+      </ol>
+    </article>
+  </section>
+
+  <!-- 4. What to know -->
+  <section class="spread" aria-label="Ce qu'il faut savoir / ما يجب أن تعرفه">
+    <article class="page" lang="fr">
+      <span class="folio">5</span>
+      <p class="date">À savoir</p>
+      <h2>Ce que fait Kridi, et ce qu'il ne fait pas.</h2>
+      <ul class="facts">
+        <li><b>Les fournisseurs aussi.</b> Un deuxième onglet pour ce que vous devez au grossiste, avec une date d'échéance si vous voulez.</li>
+        <li><b>Sans Internet.</b> Tout s'enregistre sur le téléphone, même sans réseau.</li>
+        <li><b>Pas de compte.</b> Pas d'inscription, pas de mot de passe. Vos chiffres ne quittent pas votre téléphone.</li>
+        <li><b>Gratuit, avec de la publicité.</b> Une bannière en bas de l'écran. Jamais pendant que vous tapez un montant, et jamais dans les messages envoyés à vos clients.</li>
+      </ul>
+    </article>
+    <article class="page" lang="ar" dir="rtl">
+      <span class="folio">٥</span>
+      <p class="date">للعلم</p>
+      <h2>ما يفعله دفتر الكريدي، وما لا يفعله.</h2>
+      <ul class="facts">
+        <li><b>الموردين أيضا.</b> قسم ثانٍ لما عليك لتاجر الجملة، مع تاريخ الدفع إن أردت.</li>
+        <li><b>بدون إنترنت.</b> كل شيء يُحفظ في الهاتف، حتى بدون شبكة.</li>
+        <li><b>بدون حساب.</b> لا تسجيل ولا كلمة سر. أرقامك لا تخرج من هاتفك.</li>
+        <li><b>مجاني، مع إعلانات.</b> شريط إعلاني أسفل الشاشة. لا يظهر أبدا وأنت تكتب مبلغا، ولا يدخل في الرسائل التي ترسلها لزبائنك.</li>
+      </ul>
+    </article>
+  </section>
+
+  <!-- 5. FAQ -->
+  <section class="spread faq" id="questions" aria-label="Questions / أسئلة">
+    <article class="page" lang="fr">
+      <span class="folio">6</span>
+      <p class="date">Questions</p>
+      <h2>Vos questions</h2>
+      <details><summary>Kridi est-il gratuit&nbsp;?</summary><p>Oui. L'application affiche des publicités discrètes, jamais pendant que vous notez un montant.</p></details>
+      <details><summary>Faut-il Internet&nbsp;?</summary><p>Non. Tout fonctionne hors ligne. Internet sert seulement à afficher les publicités et à envoyer les rappels WhatsApp.</p></details>
+      <details><summary>Où sont stockées mes données&nbsp;?</summary><p>Sur votre téléphone. Il n'y a ni compte ni serveur&nbsp;: nous ne voyons pas vos clients ni vos montants. Détails dans la <a href="privacy/">politique de confidentialité</a>.</p></details>
+      <details><summary>Mes clients doivent-ils installer l'application&nbsp;?</summary><p>Non. Ils reçoivent un simple message WhatsApp ou SMS que vous envoyez vous-même.</p></details>
+      <details><summary>Et si je perds mon téléphone&nbsp;?</summary><p>Pour l'instant, les données restent sur le téléphone. La sauvegarde arrive dans une prochaine version.</p></details>
+      <details><summary>Pour quels commerces&nbsp;?</summary><p>Tout commerce qui vend à crédit&nbsp;: épiceries, alimentation générale, boulangeries, pharmacies, quincailleries, taxiphones.</p></details>
+    </article>
+    <article class="page" lang="ar" dir="rtl">
+      <span class="folio">٦</span>
+      <p class="date">أسئلة</p>
+      <h2>أسئلتكم</h2>
+      <details><summary>هل التطبيق مجاني؟</summary><p>نعم. يعرض إعلانات بسيطة، ولا تظهر أبدا وأنت تسجّل مبلغا.</p></details>
+      <details><summary>هل يحتاج إلى إنترنت؟</summary><p>لا. كل شيء يعمل بدون إنترنت. الإنترنت يُستعمل فقط لعرض الإعلانات وإرسال التذكير عبر واتساب.</p></details>
+      <details><summary>أين تُحفظ بياناتي؟</summary><p>في هاتفك. لا يوجد حساب ولا خادم، ولا نرى زبائنك ولا مبالغك. التفاصيل في <a href="privacy/#ar">سياسة الخصوصية</a>.</p></details>
+      <details><summary>هل يجب على زبائني تثبيت التطبيق؟</summary><p>لا. تصلهم رسالة واتساب أو SMS عادية ترسلها أنت بنفسك.</p></details>
+      <details><summary>وإذا ضاع هاتفي؟</summary><p>حاليا تبقى البيانات في الهاتف. النسخ الاحتياطي قادم في إصدار قريب.</p></details>
+      <details><summary>لأي محلات؟</summary><p>كل محل يبيع بالكريدي: بقالة، مواد غذائية عامة، مخبزة، صيدلية، محل أدوات، طاكسيفون.</p></details>
+    </article>
+  </section>
+
+</main>
+
+<footer class="backcover">
+  <div>
+    <a class="brand" href="./"><b>Kridi</b><span lang="ar">دفتر الكريدي</span></a>
+    <p>Bientôt sur Google Play · <span lang="ar" dir="rtl">قريبا على Google Play</span></p>
+  </div>
+  <nav aria-label="Liens">
+    <a href="privacy/">Confidentialité</a>
+    <a href="privacy/#ar" lang="ar">سياسة الخصوصية</a>
+    <a href="privacy/#en" lang="en">Privacy</a>
+    <a href="mailto:slash.spitfire@gmail.com">Contact</a>
+  </nav>
+</footer>
+
+<script src="assets/site.js" defer></script>
+</body>
+</html>
